@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@layer components {
+  .gradient-text {
+    background-image: linear-gradient(
+      to right,
+      #10b981 0%,
+      #3b82f6 25%,
+      #8b5cf6 50%,
+      #ec4899 75%,
+      #10b981 100%
+    );
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 10s linear infinite;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: -300% center; }
+}
